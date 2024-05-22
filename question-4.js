@@ -5,3 +5,16 @@ const inventory = [
   { name: "Orange", price: 30, quantity: 60 },
 ];
 // เริ่มเขียนโค้ดตรงนี้
+
+// for (let i = 0; i < inventory.length; i++) {
+//   let lowAll = inventory[i].quantity;
+//   console.log(lowAll);
+// }
+
+function lowAll(cur) {
+  return cur.map((acc) => acc.quantity <= 50);
+}
+
+let result = lowAll(inventory);
+
+console.log(result);
