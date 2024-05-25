@@ -7,12 +7,11 @@ const myTodo = [
 ];
 // เริ่มเขียนโค้ดตรงนี้
 
-myTodo.id = 5;
-myTodo.todo = "Walk the dog";
+myTodo[4] = { id: 5, todo: "Walk the dog" };
 
 myTodo[3].todo = "Go to the gym";
 
-delete myTodo[4];
-console.log(myTodo[4]);
+myTodo.pop();
+console.log(myTodo);
 
 console.log(myTodo[3]);

@@ -11,10 +11,10 @@ const inventory = [
 //   console.log(lowAll);
 // }
 
-function lowAll(cur) {
-  return cur.map((acc) => acc.quantity <= 50);
-}
+const result = inventory.reduce((acc, curr) => {
+  return acc.quantity < curr.quantity ? acc : curr;
+});
 
-let result = lowAll(inventory);
-
-console.log(result);
+console.log(
+  `สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${result.name} ซึ่งมี ${result.quantity} ชิ้น`
+);

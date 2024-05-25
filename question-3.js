@@ -1,5 +1,5 @@
 // Question #3
-let userPassword = "abcde";
+let userPassword = "abcsdeasdq";
 // เริ่มเขียนโค้ดตรงนี้
 
 function checkPasswordStrength(userPassword) {

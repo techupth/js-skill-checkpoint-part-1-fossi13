@@ -13,4 +13,4 @@ let allPrice =
   inventory[1].price * inventory[1].quantity +
   inventory[2].price * inventory[2].quantity;
 
-console.log(allPrice);
+console.log(`มูลค่ารวมของจำนวนสินค้าทั้งหมดในสต็อก ${allPrice} บาท`);

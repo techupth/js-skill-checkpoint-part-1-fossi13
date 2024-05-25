@@ -18,25 +18,21 @@ const products = [
 ];
 
 const promotionCode = "";
-// เริ่มเขียนโค้ดตรงนี้
 
-let totalAll = products.reduce((acc, cur) => acc + cur.price, 0);
-console.log(totalAll);
+function calculateTotalPrice(products, promotionCode) {
+  let totalPrice = products.reduce((total, product) => {
+    return total + product.price * product.quantity;
+  }, 0);
 
-// let totalAll =
-//   products[0].price * products[0].quantity +
-//   products[1].price * products[1].quantity +
-//   products[2].price * products[2].quantity;
-// console.log(totalAll);
-
-function calculateTotalPrice(promotionCode) {
-  if (promotionCode == "") {
-    return "ไม่มี";
-  } else if (promotionCode == 68) {
-    return "SALE20";
-  } else if (promotionCode == 42.5) {
-    return "SALE20";
+  if (promotionCode === "SALE20") {
+    totalPrice *= 0.8;
+  } else if (promotionCode === "SALE50") {
+    totalPrice *= 0.5;
   }
+
+  return totalPrice;
 }
 
-console.log(calculateTotalPrice(promotionCode));
+console.log(calculateTotalPrice(products, ""));
+console.log(calculateTotalPrice(products, "SALE20"));
+console.log(calculateTotalPrice(products, "SALE50"));
